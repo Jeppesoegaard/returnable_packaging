@@ -90,7 +90,7 @@ annotate service.ReturnOrders with @(
     },
     UI.HeaderInfo : {
         TypeName : 'Return order',
-        TypeNamePlural : 'Return ordersres;;',
+        TypeNamePlural : 'Return orders',
         TypeImageUrl : 'sap-icon://customer-order-entry',
         Title : {
             $Type : 'UI.DataField',

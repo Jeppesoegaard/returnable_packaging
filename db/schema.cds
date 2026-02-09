@@ -3,6 +3,8 @@ using {
     managed,
 } from '@sap/cds/common';
 
+using {Attachments} from '@cap-js/attachments';
+
 namespace returnable_packaging.db;
 
 
@@ -12,6 +14,7 @@ entity ReturnOrders : cuid, managed {
     carrier     : String;
     delivery    : String;
     shipment    : String;
+    attachments : Composition of many Attachments;
     status      : Association to OrderStatus;
     ReturnItems : Composition of many ReturnItems
                       on ReturnItems.header = $self;
@@ -36,7 +39,6 @@ entity ReturnItems : cuid, managed {
 }
 
 entity MaterialList {
-    key code        : String;
+    key code        : Integer;
         description : String;
 }
-
